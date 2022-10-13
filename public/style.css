@@ -1,0 +1,359 @@
+body {
+    height: 100vh;
+    margin: 0;
+    background-image: url('img/milky-way-2695569_1280.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* nav bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #010727;
+}
+
+.navbar-brand {
+    padding-left: 40px;
+}
+
+.nav-h2 {
+    color: #fff;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    text-shadow: 2px 2px rgb(66, 65, 65);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+
+}
+
+.nav-item {
+    padding-right: 40px;
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* form */
+.decor {
+    background-color: #c4deee;
+    width: 300px;
+    height: 300px;
+    padding: 0 20px;
+}
+.h2.text{
+    text-align: center;
+}
+.form-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.form-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-inner h1 {
+    font-family: sans-serif;
+    text-shadow: 2px 2px rgb(66, 65, 65);
+}
+
+.form-inner input {
+    margin: 15px 0;
+    padding: 15px 10px;
+    width: 90%;
+    outline: none;
+    border: 1px solid #bbb;
+    border-radius: 20px;
+}
+
+.form-row input {
+    width: 10%;
+    text-align: center;
+    margin-left: 30px;
+}
+
+.btn-form {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 8px 30px;
+    border-radius: 20px;
+    color: #fff;
+    border-color: rgb(69, 28, 167);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(9, 9, 121, 1) 0%, rgb(64, 52, 235) 100%);
+    cursor: pointer;
+}
+.form-check-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.form-check input{
+    margin-left: 20px;
+}
+/* big form */
+.big-form {
+    width: 400px;
+    background-color: #c4deee;
+    padding: 10px;
+}
+
+.form-input-col {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.form-row-line.centre{
+    width: 100%;
+    justify-content: center;
+}
+.form-row-line.centre h2{
+    margin: 0;
+    font-family: sans-serif;
+    text-shadow: 2px 2px #fff;
+}
+.form-label {
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+
+.form-input {
+    height: 21px;
+    padding: 6px 12px;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #555555;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #e7e7e7;
+    border-radius: 4px;
+}
+
+.form-row-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-input.deg {
+    width: 20px;
+}
+
+.form-input.radio {
+    height: 15px;
+}
+
+.radio-row {
+    display: flex;
+    align-items: center;
+}
+
+.radio-row label {
+    font-size: 25px;
+}
+
+.form-input.select {
+    height: 35px;
+}
+
+.radio-block {
+    display: flex;
+    flex-direction: row;
+    width: 80px;
+    margin-right: 20px;
+}
+.form-label.pit{
+    margin-right: 10px;
+}
+.cord{
+    margin-right: 10px;
+}
+.form-label.kg{
+    margin-left: 5px;
+}
+.form-img{
+    width: 50px;
+    margin: 5px;
+}
+
+
+/* Table */
+.caption {
+    text-shadow: 2px 2px rgb(66, 65, 65);
+}
+
+.table,
+th,
+td {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.table th {
+    background-color: #3f0472;
+}
+
+th {
+    padding: 3px;
+}
+
+tr {
+    text-align: center;
+    padding: 3px;
+}
+
+tr:nth-child(odd) {
+    background: rgb(65, 64, 64);
+}
+
+/* buttons */
+.btn-action {
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 5px;
+    padding: 0 10px;
+
+}
+
+.btn-edit {
+    background-color: #025314;
+}
+
+.btn-delete {
+    cursor: pointer;
+    background-color: #440202;
+}
+.btn-form.medium{
+    width: 120px;
+}
+/* footer */
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #010727;
+    padding-top: 16px;
+}
+
+.footer-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: #fff;
+}
+
+.footer-links a {
+    padding-left: 40px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-font {
+    padding-right: 20px;
+}
+
+.footer-font a {
+    margin-right: 20px;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-left: 3px;
+    background-color: #051893;
+
+}
+
+/* DropDown */
+.dropbtn {
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 5px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Lists */
+.ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 5px;
+}
+
+/* messages */
+.alert{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4a5a5;
+}
