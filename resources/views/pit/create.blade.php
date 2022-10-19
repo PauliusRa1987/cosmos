@@ -9,7 +9,7 @@
         </div>
         <div class="form-input-col">
             <label class="form-label" for="pit_name">Pit Name</label>
-            <input class="form-input" type="text" id="pit_name" name="pit_name" placeholder="Enter Name">
+            <input class="form-input" type="text" id="pit_name" name="pit_name" placeholder="Enter Name"  value="{{old('pit_name')}}">
         </div>
         <div class="form-input-col">
             <label class="form-label" for="country_id">Country</label>
@@ -36,15 +36,15 @@
                         </div>
                     </div>
                     <div class="cord">
-                        <input class="form-input deg" type="text" name="lat_deg">
+                        <input class="form-input deg" type="text" name="lat_deg"  value="{{old('lat_deg')}}">
                         <label class="form-label">&#176;</label>
                     </div>
                     <div class="cord">
-                        <input class="form-input deg" type="text" name="lat_min">
+                        <input class="form-input deg" type="text" name="lat_min" value="{{old('lat_min')}}">
                         <label class="form-label">&#8242;</label>
                     </div>
                     <div class="cord">
-                        <input class="form-input deg" type="text" name="lat_sec">
+                        <input class="form-input deg" type="text" name="lat_sec" value="{{old('lat_sec')}}">
                         <label class="form-label">&#8243;</label>
                     </div>
 
@@ -64,15 +64,15 @@
                         </div>
                     </div>
                     <div class="cord">
-                        <input class="form-input deg" type="text" name="lng_deg">
+                        <input class="form-input deg" type="text" name="lng_deg" value="{{old('lng_deg')}}">
                         <label class="form-label">&#176;</label>
                     </div>
                     <div class="cord">
-                        <input class="form-input deg" type="text" name="lng_min">
+                        <input class="form-input deg" type="text" name="lng_min" value="{{old('lng_min')}}">
                         <label class="form-label">&#8242;</label>
                     </div>
                     <div class="cord">
-                        <input class="form-input deg" type="text" name="lng_sec">
+                        <input class="form-input deg" type="text" name="lng_sec" value="{{old('lng_sec')}}">
                         <label class="form-label">&#8243;</label>
                     </div>
 
@@ -83,7 +83,7 @@
             <div class="form-row-line">
                 <div class="form-row-line margin">
                     <label class="form-label pit" for="pit_capacity">Pit Capacity</label>
-                    <input class="form-input deg" type="text" name="pit_capacity">
+                    <input class="form-input deg" type="text" name="pit_capacity" value="{{old('pit_capacity')}}">
                     <label class="form-label kg">kg/24h</label>
                 </div>
             </div>

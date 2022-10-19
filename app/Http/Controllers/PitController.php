@@ -83,7 +83,11 @@ class PitController extends Controller
         $pit->pit_name = $request->pit_name;
         $pit->country_id = $request->country_id;
         $pit->capacity = $request->pit_capacity;
+        $country = Country::where('id', '=', $request->country_id)->first();
+        $country->total_capacity += $request->pit_capacity;
+        $country->save();
         $pit->save();
+        
         return redirect()->route('pit-index');
     }
 
@@ -136,6 +140,8 @@ class PitController extends Controller
      */
     public function update(Request $request, Pit $pit)
     {
+        $country = Country::where('id', '=', $request->country_id)->first();
+        $country->total_capacity -= $pit->capacity;
         $pit->lat = $request->lat_deg + (($request->lat_min)/60) + (($request->lat_sec)/3600);
         $pit->position_lat = $request->position_lat;
         $pit->lng = $request->lng_deg + (($request->lng_min)/60) + (($request->lng_sec)/3600);
@@ -143,6 +149,8 @@ class PitController extends Controller
         $pit->pit_name = $request->pit_name;
         $pit->country_id = $request->country_id;
         $pit->capacity = $request->pit_capacity;
+        $country->total_capacity += $request->pit_capacity;
+        $country->save();
         $pit->save();
         return redirect()->route('pit-index');
     }
@@ -155,6 +163,9 @@ class PitController extends Controller
      */
     public function destroy(Pit $pit)
     {
+        $country = Country::where('id', '=', $pit->country_id)->first();
+        $country->total_capacity -= $pit->capacity;
+        $country->save();
         $pit->delete();
         return redirect()->back();
     }

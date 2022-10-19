@@ -38,13 +38,15 @@
             @endforelse
             </td>
             <td>
-            @forelse($country->countCapacity as $pit)
-                {{$pit->total}}
-            @empty
+            @if($country->total_capacity)
+                <ul class="ul">
+                    <li>{{$country->total_capacity}}</li>
+                </ul>
+            @else
                 <ul class="ul">
                     <li>List is empty!</li>
                 </ul>
-            @endforelse
+            @endif
             </td>
             </tr>
         @empty

@@ -8,7 +8,7 @@ class FrontController extends Controller
 {
     public function index()
     {
-        $countries = Country::all();
+        $countries = Country::all()->sortByDesc('total_capacity');
         return view('front.index',
         [
             'countries' => $countries,

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('country_name', 50);
             $table->unsignedSmallInteger('pit_count');
+            $table->decimal('total_capacity', 4, 2)->nullable();
             $table->timestamps();
         });
     }

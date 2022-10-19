@@ -4,7 +4,7 @@
             <a href="{{route('country-index')}}">Countries</a>
             <a href="{{route('pit-index')}}">Pits</a>
             <a href="{{route('ship-index')}}">Ships</a>
-            <a href="#">Contact</a>
+            <a href="{{route('front-index')}}">Report</a>
         </div>
         <div class="footer-font">
             <a href="#"><i class="fa fa-facebook"></i></a>

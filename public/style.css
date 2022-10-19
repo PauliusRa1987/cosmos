@@ -202,13 +202,14 @@ body {
 /* Table */
 .caption {
     text-shadow: 2px 2px rgb(66, 65, 65);
+    color: #fff;
 }
 
 .table,
 th,
 td {
     border: 2px solid #fff;
-    color: #fff;
+    
 }
 
 table {
@@ -226,10 +227,13 @@ th {
 tr {
     text-align: center;
     padding: 3px;
+    background: rgb(160, 153, 153);
+    
 }
 
 tr:nth-child(odd) {
     background: rgb(65, 64, 64);
+    color: #fff;
 }
 
 /* buttons */
