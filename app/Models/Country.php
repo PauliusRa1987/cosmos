@@ -20,4 +20,8 @@ class Country extends Model
     {
         return $this->hasMany(Ship::class, 'country_id', 'id');
     }
+    public function getUnionInfo()
+    {
+        return $this->belongsTo(Union::class, 'union_id', 'id');
+    }
 }

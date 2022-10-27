@@ -3,6 +3,7 @@
         <div class="footer-links">
             <a href="{{route('country-index')}}">Countries</a>
             <a href="{{route('pit-index')}}">Pits</a>
+            <a href="{{route('union-index')}}">Unions</a>
             <a href="{{route('ship-index')}}">Ships</a>
             <a href="{{route('front-index')}}">Report</a>
         </div>

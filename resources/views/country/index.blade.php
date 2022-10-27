@@ -8,12 +8,20 @@
         <tr>
             <th>Country</th>
             <th>Allowed Amount of Pits</th>
+            <th>Union</th>
             <th>Action</th>
         </tr>
         @forelse ( $countries as $country )
         <tr>
             <td>{{$country->country_name}}</td>
             <td>{{$country->pit_count}}</td>
+            <td>
+            @if($country->getUnionInfo)
+                {{$country->getUnionInfo->union_name}}
+            @else 
+            <a class="btn-action btn-join" href="{{route('country-join', $country)}}">Join the Block</a>
+            @endif
+            </td>
             <td>
                 <div class="form-row">
                     <a class="btn-action btn-edit" href="{{route('country-edit', $country)}}">Edit</a>

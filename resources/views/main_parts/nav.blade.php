@@ -23,6 +23,14 @@
         </li>
        <li class="nav-item">
             <div class="dropdown">
+                <a class="nav-link" href="{{route('union-index')}}">Unions</a>
+                <div class="dropdown-content">
+                    <a href="{{route('union-create')}}">Create</a>
+                </div>
+            </div>
+        </li>
+        <li class="nav-item">
+            <div class="dropdown">
                 <a class="nav-link" href="{{route('ship-index')}}">Ships</a>
                 <div class="dropdown-content">
                     <a href="{{route('ship-create')}}">Create</a>

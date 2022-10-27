@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Country;
+use App\Models\Union;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
@@ -75,7 +76,12 @@ class CountryController extends Controller
      */
     public function edit(Country $country)
     {
-        return view('country.edit', ['country' => $country]);
+        $unions = Union::all();
+        return view('country.edit', [
+            'country' => $country,
+            'unions' => $unions
+        
+        ]);
     }
 
     /**
@@ -99,6 +105,7 @@ class CountryController extends Controller
             $request->flash();
             return redirect()->back()->withErrors($validator);
         }
+        $country->union_id = $request->union_id;
         $country->country_name = $request->country_name;
         $country->pit_count = $request->pit_count;
         $country->save();
@@ -125,4 +132,20 @@ class CountryController extends Controller
         $country->delete();
         return redirect()->back();
     }
+    public function join(Country $country)
+    {
+        $unions = Union::all();
+        return view('country.join', [
+            'country' => $country,
+            'unions' => $unions
+        ]);
+    }
+    public function save(Request $request, Country $country)
+    {
+        
+        $country->union_id = $request->union_id;
+        $country->save();
+        return redirect()->route('country-index');
+    }
+
 }

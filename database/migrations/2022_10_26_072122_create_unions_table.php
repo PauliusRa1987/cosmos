@@ -13,13 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('countries', function (Blueprint $table) {
+        Schema::create('unions', function (Blueprint $table) {
             $table->id();
-            $table->string('country_name', 50);
-            $table->unsignedSmallInteger('pit_count');
-            $table->decimal('total_capacity', 4, 2)->nullable();
-            $table->unsignedBigInteger('union_id')->nullable();
-            $table->foreign('union_id')->references('id')->on('unions')->onDelete('cascade');
+            $table->string('union_name', 50);
             $table->timestamps();
         });
     }
@@ -31,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('countries');
+        Schema::dropIfExists('unions');
     }
 };
