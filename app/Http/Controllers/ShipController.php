@@ -8,6 +8,7 @@ use App\Models\Ship;
 use Intervention\Image\Facades\Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\DB;
 
 class ShipController extends Controller
 {
@@ -63,7 +64,7 @@ class ShipController extends Controller
             $name = pathinfo($photo->getClientOriginalName(), PATHINFO_FILENAME);
             $file = $name . '-' . rand(100000, 999999) . '.' . $ext;
             $img = Image::make($photo)->resize(50, 50);
-            $img->save(public_path().'/img/'.$file);
+            $img->save(public_path() . '/img/' . $file);
             $ship->photo = asset('/img') . '/' . $file;
         }
 
@@ -92,10 +93,22 @@ class ShipController extends Controller
      */
     public function edit(Ship $ship)
     {
-        
+        if ($ship->getCountryInfo->union_id) {
+            $pitsAll1 = DB::table('countries')
+                ->where('countries.union_id', '=', $ship->getCountryInfo->union_id)
+                ->get();
+            foreach ($pitsAll1 as $pit) {
+                $yes[] = $pit->id;
+            }
+            $pitsAll = Pit::all();
+            $pits = $pitsAll->whereIn('country_id', $yes);
+            
+            return view('ship.edit', ['ship' => $ship, 'pits' => $pits]);
+        }
+
         $pitsAll = Pit::all();
         $pits = $pitsAll->where('country_id', $ship->country_id);
-        
+
         return view('ship.edit', ['ship' => $ship, 'pits' => $pits]);
     }
 
@@ -122,7 +135,7 @@ class ShipController extends Controller
             $name = pathinfo($photo->getClientOriginalName(), PATHINFO_FILENAME);
             $file = $name . '-' . rand(100000, 999999) . '.' . $ext;
             $img = Image::make($photo)->resize(50, 50);
-            $img->save(public_path().'/img/'.$file);
+            $img->save(public_path() . '/img/' . $file);
             $ship->photo = asset('/img') . '/' . $file;
         }
         $ship->pits()->detach();
@@ -130,7 +143,6 @@ class ShipController extends Controller
         $ship->ship_name = $request->ship_name;
         $ship->save();
         return redirect()->route('ship-index');
-
     }
 
     /**
