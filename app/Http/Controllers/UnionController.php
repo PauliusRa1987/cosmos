@@ -91,6 +91,17 @@ class UnionController extends Controller
      */
     public function destroy(Union $union)
     {
+        foreach ($union->hasCountries as $counties){
+            $country = Country::where('id', '=', $counties->id)->first();
+            foreach($country->hasShips as $ship){
+              $ship->pits()->detach();  
+            }
+            
+        $country->union_id = null;
+        $country->save();
+        }
+        
+
         $union->delete();
         return redirect()->back();
     }

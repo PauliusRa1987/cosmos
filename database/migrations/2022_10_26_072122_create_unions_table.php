@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('unions', function (Blueprint $table) {
             $table->id();
             $table->string('union_name', 50);
+            $table->decimal('union_total_capacity', 4, 2)->nullable();
             $table->timestamps();
         });
     }

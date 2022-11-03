@@ -20,6 +20,7 @@ class ShipController extends Controller
     public function index()
     {
         $ships = Ship::all();
+        // dd($ships );
         return view('ship.index', ['ships' => $ships]);
     }
 
@@ -93,6 +94,7 @@ class ShipController extends Controller
      */
     public function edit(Ship $ship)
     {
+
         if ($ship->getCountryInfo->union_id) {
             $pitsAll1 = DB::table('countries')
                 ->where('countries.union_id', '=', $ship->getCountryInfo->union_id)
@@ -102,7 +104,6 @@ class ShipController extends Controller
             }
             $pitsAll = Pit::all();
             $pits = $pitsAll->whereIn('country_id', $yes);
-            
             return view('ship.edit', ['ship' => $ship, 'pits' => $pits]);
         }
 

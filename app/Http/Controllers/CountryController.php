@@ -108,6 +108,10 @@ class CountryController extends Controller
         $country->union_id = $request->union_id;
         $country->country_name = $request->country_name;
         $country->pit_count = $request->pit_count;
+        $union = Union::where('id', '=', $request->union_id)->first();
+        $union->union_total_capacity -= $country->total_capacity;
+        $union->union_total_capacity += $country->total_capacity;
+        $union->save();
         $country->save();
         return redirect()->route('country-index');
     }
@@ -128,7 +132,9 @@ class CountryController extends Controller
             $request->flash();
             return redirect()->back()->withErrors('Deleting is prohibited! This country still has a spaceship.');
         }
-
+        $union = Union::where('id', '=', $country->union_id)->first();
+        $union->union_total_capacity -= $country->total_capacity;
+        $union->save();
         $country->delete();
         return redirect()->back();
     }
@@ -144,6 +150,9 @@ class CountryController extends Controller
     {
         
         $country->union_id = $request->union_id;
+        $union = Union::where('id', '=', $request->union_id)->first();
+        $union->union_total_capacity += $country->total_capacity;
+        $union->save();
         $country->save();
         return redirect()->route('country-index');
     }

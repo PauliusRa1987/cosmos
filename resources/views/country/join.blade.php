@@ -13,7 +13,7 @@
         </div>
         <div class="form-input-col">
             <label class="form-label" for="country_id">Union</label>
-            <select class="form-input select" id="union_id" name="union_id">
+            <select class="form-input select" id="union_id" name="union_id" required>
                 <option value=''>-- Join the union --</option>
                 @foreach ( $unions as $union )
                 <option value="{{$union->id}}">{{$union->union_name}}</option>
