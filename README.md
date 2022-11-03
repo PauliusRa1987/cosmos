@@ -1,4 +1,7 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## Laravel Kosmosas
+
+Gilėjant energetinei krizei Pasaulyje, buvo nuspręsta pradėti Helio 3 kasybą Mėnulyje:
+https://en.wikipedia.org/wiki/Helium-3#Extraterrestrial_mining
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
@@ -7,57 +10,57 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Vizija
+1. Naujų Šalių, dalyvaujančių Mėnulio kasyboje, pridėjimas, redagavimas,
+pašalinimas. Kiekviena Šalis privalomai turi tokius atributus:
+a. Pavadinimas
+b. Planuojamas kasyklų kiekis (turi būti neleidžiama Šaliai turėti daugiau
+kasyklų negu nurodyta)
+2. Naujų kasyklų Mėnulio paviršiuje kūrimas, redagavimas, griovimas. Kiekviena
+kasyklą privalo turėti tokius atributus:
+a. Koordinatės- ilguma ir platuma pagal Mėnulio koordinačių sistemą
+https://en.wikipedia.org/wiki/Selenographic_coordinate_system
+b. Pavadinimas
+c. Šalis, kuriai priklauso kasyklą, iš sąrašo
+d. Helio 3 kasimo pajėgumus kg per Žemės parą
+e. Laivų, gabenačių Helį 3 iš kasyklos sąrašas
+3. Naujų kosminių laivų, gabenančių Helį 3 kūrimas, redagavimas ir išardymas.
+Kiekvienas kosminis laivas privalomai turi tokius atributus:
+a. Pavadinimas
+b. Šalis, kuriai priklauso laivas, iš sąrašo
+c. Kasyklų, iš kurių laivas gabena Helį 3 sąrašas
+d. Kosminio laivo nuotrauka
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Ateities vizija
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Projektas taip pat numato Šalių Blokų sukūrimą. (Papildoma užduotis, atlikus 1-3
+punktus). Naujų Šalių Blokų kūrimą, redagavimą ir naikinimą. Kiekvienas Šalių Blokas
+privalomai turi turėti tokius atributus:
+- Pavadinimas
+- Šalių, priklausančių Blokui sąrašas. Kiekviena Šalis gali dalyvauti tik
+viename bloke, laisvai iš jo išeiti ar pereiti į kitą Bloką. Blokui suirus, jame
+buvusios Šalys tampa laisvos
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Ataskaita
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Suformuoti ataskaitą (atskirą puslapį arba pdf dokumentą), kuriame būtų visų Šalių
+sąrašas su šalia pateiktu turimų laivų ir kasyklų sąrašu. Sąrašas turi būti išrūšiuotas
+pagal Helio 3 suminio visų turimų kasyklų kasimo pajėgumus kg per Žemės parą nuo
+didžiausio iki mažiausio.
+Ateityje ataskaitą patobulinti, analogiškai atvaizduojant Šalių Blokus, ataskaitos gale
+pridedant Šalis, neįeinančias į jokio Bloko sudėtį (jeigu tokių yra).
 
-## Laravel Sponsors
+## Paaiškinimai
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Kiekvienoje kasykloje gali lankytis bet koks kiekis kosminių laivų. Kiekvienas kosminis
+laivas gali skristi į bet kokį kiekį kasyklų. Laivo ir kasyklos Šalis turi sutapti. T.y. vienos
+Šalies kasyklos negali lankyti kitai Šaliai priklausantis laivas.
+Ateityje, atsiradus Šalių Blokams, visi vieno Bloko laivai galės lankyti visas to Bloko
+Šalių kasyklas. Šaliai išėjus iš Bloko, ryšiai tarp skirtingų Šalių kasyklų/lavų porų turi
+būti nutraukiami automatiškai
 
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 
