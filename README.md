@@ -12,23 +12,23 @@ https://en.wikipedia.org/wiki/Helium-3#Extraterrestrial_mining
 ## Vizija
 1. Naujų Šalių, dalyvaujančių Mėnulio kasyboje, pridėjimas, redagavimas,
 pašalinimas. Kiekviena Šalis privalomai turi tokius atributus:
-a. Pavadinimas
-b. Planuojamas kasyklų kiekis (turi būti neleidžiama Šaliai turėti daugiau
+- Pavadinimas
+- Planuojamas kasyklų kiekis (turi būti neleidžiama Šaliai turėti daugiau
 kasyklų negu nurodyta)
 2. Naujų kasyklų Mėnulio paviršiuje kūrimas, redagavimas, griovimas. Kiekviena
 kasyklą privalo turėti tokius atributus:
-a. Koordinatės- ilguma ir platuma pagal Mėnulio koordinačių sistemą
+- Koordinatės- ilguma ir platuma pagal Mėnulio koordinačių sistemą
 https://en.wikipedia.org/wiki/Selenographic_coordinate_system
-b. Pavadinimas
-c. Šalis, kuriai priklauso kasyklą, iš sąrašo
-d. Helio 3 kasimo pajėgumus kg per Žemės parą
-e. Laivų, gabenačių Helį 3 iš kasyklos sąrašas
+- Pavadinimas
+- Šalis, kuriai priklauso kasyklą, iš sąrašo
+- Helio 3 kasimo pajėgumus kg per Žemės parą
+- Laivų, gabenačių Helį 3 iš kasyklos sąrašas
 3. Naujų kosminių laivų, gabenančių Helį 3 kūrimas, redagavimas ir išardymas.
 Kiekvienas kosminis laivas privalomai turi tokius atributus:
-a. Pavadinimas
-b. Šalis, kuriai priklauso laivas, iš sąrašo
-c. Kasyklų, iš kurių laivas gabena Helį 3 sąrašas
-d. Kosminio laivo nuotrauka
+- Pavadinimas
+- Šalis, kuriai priklauso laivas, iš sąrašo
+- Kasyklų, iš kurių laivas gabena Helį 3 sąrašas
+- Kosminio laivo nuotrauka
 
 
 ## Ateities vizija
