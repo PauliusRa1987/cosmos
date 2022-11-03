@@ -1,14 +1,13 @@
 ## Laravel Kosmosas
-
-Gilėjant energetinei krizei Pasaulyje, buvo nuspręsta pradėti Helio 3 kasybą Mėnulyje:
-https://en.wikipedia.org/wiki/Helium-3#Extraterrestrial_mining
-
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+
+Gilėjant energetinei krizei Pasaulyje, buvo nuspręsta pradėti Helio 3 kasybą Mėnulyje:
+https://en.wikipedia.org/wiki/Helium-3#Extraterrestrial_mining
 
 ## Vizija
 1. Naujų Šalių, dalyvaujančių Mėnulio kasyboje, pridėjimas, redagavimas,
