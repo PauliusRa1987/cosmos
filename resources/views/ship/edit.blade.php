@@ -16,7 +16,7 @@
             <input class="form-input" name="country_id" value="{{$ship->getCountryInfo->country_name}}" readonly>
         </div>
         <div class="form-input-col">
-            <label class="form-label pit" for="photo">Ship Image</label>
+            <label class="form-label pit" for="photo">Ship  Image</label>
             <div class="form-row-line">
                 <img class="form-img" src="{{$ship->photo}}" alt="ship photo">
                 <input type="file" class="form-input" id="image" name="ship_image">
